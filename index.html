@@ -2,164 +2,66 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Outlook - Congratulations Akhil G!</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Akhil Chat</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#f3f6f8;color:#1f1f1f;font-family:"Segoe UI",Arial,sans-serif;font-size:14px}
-.top{height:56px;background:#0b70c9;color:#fff;display:flex;align-items:center;padding:0 18px;gap:18px}
-.grid{font-size:22px}.outlook{font-size:20px;font-weight:600}
-.search{height:36px;background:#fff;color:#666;border-radius:4px;width:520px;display:flex;align-items:center;padding:0 14px;margin-left:12px}
-.topicons{margin-left:auto;display:flex;gap:22px;font-size:18px;align-items:center}
-.avatarTop{width:32px;height:32px;border-radius:50%;border:1px solid #fff;display:flex;align-items:center;justify-content:center}
-.layout{display:flex;min-height:calc(100vh - 56px)}
-.sidebar{width:245px;background:#fff;border-right:1px solid #ddd;padding:10px 10px}
-.newmail{background:#0878d1;color:#fff;border:0;border-radius:4px;padding:12px 22px;font-size:14px;font-weight:600;margin:4px 10px 14px}
-.navtitle{font-weight:600;padding:8px 12px}
-.nav div{padding:9px 12px;border-radius:4px;margin:2px 0}
-.nav .selected{background:#dceeff;color:#0067b8;font-weight:600}
-.folder{margin-top:18px;font-weight:600;padding:8px 12px}
-.main{flex:1;min-width:0}
-.toolbar{height:52px;background:#fff;border-bottom:1px solid #ddd;display:flex;align-items:center;gap:25px;padding:0 22px}
-.toolbar span{white-space:nowrap}
-.mail{background:#fff;max-width:1280px;margin:0 auto;min-height:calc(100vh - 108px)}
-.mailhead{padding:18px 28px 14px;border-bottom:1px solid #ddd}
-.fromrow{display:flex;align-items:center;gap:12px}
-.fromavatar{width:44px;height:44px;border-radius:50%;background:#4d7fb7;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
-.fromname{font-size:16px;font-weight:600}
-.meta{font-size:13px;color:#555;margin-top:2px}
-.date{margin-left:auto;color:#555;font-size:13px}
-.subject{font-size:23px;font-weight:600;margin-top:17px}
-.body{padding:22px 28px 35px}
-.hero{border-bottom:1px solid #ddd;padding-bottom:18px;margin-bottom:18px}
-.hero h1{margin:0 0 7px;font-size:25px;font-weight:600}
-.hero p{margin:5px 0;font-size:15px;line-height:1.5}
-.panel{background:#e9f5ff;border-radius:8px;padding:16px 20px;margin:18px 0}
-.panel h2{font-size:19px;margin:0 0 10px;color:#123b70}
-.columns{display:grid;grid-template-columns:1fr 1fr;gap:6px 35px}
-.columns div{line-height:1.45;padding:4px 0}
-.gift{background:#fff7c9;border-radius:8px;padding:16px 18px;margin-top:14px}
-.gift h2{margin:0 0 12px;font-size:19px}
-.gifts{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
-.giftitem{background:#fff;border:1px solid #ddd;border-radius:5px;padding:10px 12px;min-height:76px}
-.giftitem .title{font-weight:600;font-size:13px}
-.giftitem .desc{font-size:12px;color:#555;margin-top:4px}
-.signature{margin-top:20px;line-height:1.55}
-@media(max-width:850px){
-.sidebar{display:none}.search{flex:1;width:auto}.topicons{display:none}
-.mail{min-height:100vh}.mailhead,.body{padding-left:16px;padding-right:16px}
-.columns{grid-template-columns:1fr}.gifts{grid-template-columns:1fr 1fr}
-.subject{font-size:19px}.toolbar{gap:15px;overflow:hidden}
-.date{display:none}
-}
-@media(max-width:480px){.gifts{grid-template-columns:1fr}.hero h1{font-size:22px}.top{gap:9px}.outlook{font-size:17px}}
+*{box-sizing:border-box}body{margin:0;background:#d8d1c5;font-family:Arial,sans-serif}
+.phone{max-width:430px;height:100vh;margin:auto;background:#efe7da;display:flex;flex-direction:column;overflow:hidden}
+.header{height:64px;background:#075e54;color:#fff;display:flex;align-items:center;padding:0 12px;gap:10px;flex-shrink:0}
+.back{font-size:30px}.avatar{width:42px;height:42px;border-radius:50%;overflow:hidden;background:#ddd}.avatar img{width:100%;height:100%;object-fit:cover}
+.name{font-size:17px;font-weight:600}.online{font-size:12px;opacity:.8}.icons{margin-left:auto;font-size:23px}
+.chat{flex:1;overflow-y:auto;padding:18px 12px;background:#efe7da;background-image:radial-gradient(#d8cec0 1px,transparent 1px);background-size:18px 18px}
+.date{margin:auto auto 16px;width:max-content;background:#e6dfd2;color:#6d655b;padding:6px 12px;border-radius:8px;font-size:12px}
+.msg{max-width:78%;padding:9px 11px 7px;border-radius:8px;margin:8px 0;box-shadow:0 1px 1px #0002;line-height:1.4;font-size:15px;animation:show .3s}
+.them{background:#fff;margin-right:auto;border-top-left-radius:2px}.me{background:#d9fdd3;margin-left:auto;border-top-right-radius:2px}
+.time{font-size:10px;color:#777;float:right;margin:6px 0 0 10px}.tick{color:#4285f4}
+.typing{width:64px;background:#fff;border-radius:9px;padding:10px 13px;margin:8px 0;box-shadow:0 1px 1px #0002}
+.dot{display:inline-block;width:6px;height:6px;background:#999;border-radius:50%;margin:0 2px;animation:b 1s infinite}.dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}
+.start{padding:18px;text-align:center;background:#075e54}.start button{background:#25d366;color:#fff;border:0;border-radius:22px;padding:12px 25px;font-size:16px;font-weight:bold}
+.final{display:none;text-align:center;background:#fff;padding:20px;color:#333}.final .heart{font-size:40px}.final h2{color:#075e54;margin:5px}.final p{margin:6px}
+@keyframes show{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@keyframes b{0%,60%,100%{transform:none}30%{transform:translateY(-4px)}}
 </style>
 </head>
 <body>
-<header class="top">
-  <div class="grid">▦</div>
-  <div class="outlook">Outlook</div>
-  <div class="search">⌕&nbsp;&nbsp; Search</div>
-  <div class="topicons"><span>▣ Teams call</span><span>💬</span><span>▦</span><span>♧</span><span>⚙</span><div class="avatarTop">MT</div></div>
+<div class="phone">
+<header class="header">
+  <div class="back">‹</div>
+  <div class="avatar"><img src="data:image/jpeg;base64,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"></div>
+  <div><div class="name">Akhil</div><div class="online" id="status">online</div></div>
+  <div class="icons">⋮</div>
 </header>
-
-<div class="layout">
-<aside class="sidebar">
-  <button class="newmail">✉ New mail⌄</button>
-  <div class="nav">
-    <div>☆ &nbsp; Favorites</div>
-    <div class="selected">▣ &nbsp; Inbox <b style="float:right">3</b></div>
-    <div>◈ &nbsp; Sent Items</div>
-    <div>□ &nbsp; Drafts</div>
-    <div>▣ &nbsp; Deleted Items</div>
-  </div>
-  <div class="folder">⌄ &nbsp; Folders</div>
-  <div class="nav">
-    <div>▣ &nbsp; Inbox <b style="float:right">3</b></div>
-    <div>◫ &nbsp; Junk Email</div>
-    <div>□ &nbsp; Drafts</div>
-    <div>◈ &nbsp; Sent Items</div>
-    <div>▤ &nbsp; Archive</div>
-    <div>▱ &nbsp; Notes</div>
-    <div>◫ &nbsp; Conversation History</div>
-  </div>
-</aside>
-
-<main class="main">
-  <div class="toolbar">
-    <span>↩ Reply</span><span>↪ Reply all</span><span>↗ Forward</span>
-    <span>🗑 Delete</span><span>▣ Archive</span><span>⚑ Report</span>
-    <span>⌁ Sweep</span><span>▣ Move to⌄</span><span>◇ Categorize⌄</span><span>•••</span>
-  </div>
-
-  <article class="mail">
-    <div class="mailhead">
-      <div class="fromrow">
-        <div class="fromavatar">MT</div>
-        <div>
-          <div class="fromname">Management Team</div>
-          <div class="meta">management@ourcompany.com</div>
-          <div class="meta">To: &nbsp;Akhil G (Team Lead)</div>
-          <div class="meta">Cc: &nbsp;All Team Members (500+), HR, Operations, Delivery, PMO</div>
-        </div>
-        <div class="date">Fri 27 Sep 2026 11:15 AM</div>
-      </div>
-      <div class="subject">🏆 Congratulations Akhil G! – Successfully Managing 500+ Team Members! ⭐</div>
-    </div>
-
-    <div class="body">
-      <section class="hero">
-        <h1>Dear Akhil G,</h1>
-        <p>On behalf of the management team, we would like to extend our heartfelt congratulations for your incredible efforts in managing <b>500+ team members</b> across multiple projects, domains and time zones.</p>
-        <p>Your leadership, coordination and consistent support have been truly commendable. Despite the high number of people, multiple parallel activities and endless updates, you continue to keep everything on track. 👏</p>
-        <p>Your ability to stay calm (most of the time 😄), handle unexpected situations, answer countless questions, and ensure smooth communication has made a big difference. The team truly appreciates your guidance and support.</p>
-        <p>We are delighted to recognize your contribution and would like to present a small token of appreciation from the management team.</p>
-      </section>
-
-      <section class="panel">
-        <h2>📊 Management Observations (Unofficial, but 100% True 😄)</h2>
-        <div class="columns">
-          <div>☑ Handles 500+ team members without losing track <small>(still a mystery to us!)</small></div>
-          <div>☑ Somehow remembers who is working on what <small>(we don't know how!)</small></div>
-          <div>☑ Replies to messages even when they keep coming non-stop</div>
-          <div>☑ Gives clear directions even in the most confusing situations</div>
-          <div>☑ Joins meetings, listens to everything, and gives the right input at the right time</div>
-          <div>☑ Makes things happen without unnecessary drama</div>
-          <div>☑ Finds solutions for questions that even Google doesn't have answers for</div>
-          <div>☑ Still says, “Okay, I'll check and get back” for the 101st time 😄</div>
-          <div>☑ Manages projects, calls, updates, reports and follow-ups</div>
-          <div>☑ Keeps the team together and moving forward</div>
-          <div>☑ 500+ people. One Team Lead. Still functioning. 🎉</div>
-          <div>☑ Most importantly… the team is still here! 😂</div>
-        </div>
-      </section>
-
-      <section class="gift">
-        <h2>🎁 Management Gifts for Akhil G — 500+ Edition</h2>
-        <div class="gifts">
-          <div class="giftitem"><div class="title">🧑‍💼 Mini Akhil G Figurine</div><div class="desc">Always ready for the next meeting.</div></div>
-          <div class="giftitem"><div class="title">🎧 Noise Cancellation Headphones</div><div class="desc">For 500+ simultaneous updates.</div></div>
-          <div class="giftitem"><div class="title">☕ Unlimited Coffee Kit</div><div class="desc">To survive 500+ questions.</div></div>
-          <div class="giftitem"><div class="title">⌨️ “I'll Check & Get Back” Keyboard</div><div class="desc">Most-used phrase included. 😄</div></div>
-          <div class="giftitem"><div class="title">🔴 Do Not Disturb Button</div><div class="desc">For the 3 minutes between meetings.</div></div>
-          <div class="giftitem"><div class="title">📨 Reply Later Auto-Responder</div><div class="desc">For after-hours messages. 😂</div></div>
-          <div class="giftitem"><div class="title">🖥️ Extra Screen Monitor</div><div class="desc">For tracking 500 things at once.</div></div>
-          <div class="giftitem"><div class="title">🔋 Patience Booster Kit</div><div class="desc">Officially approved by Management.</div></div>
-          <div class="giftitem"><div class="title">🔢 Team Member Counter</div><div class="desc">Because counting to 500 is a daily activity.</div></div>
-          <div class="giftitem"><div class="title">📘 Shortcut Keys Handbook</div><div class="desc">Ctrl + S for sanity.</div></div>
-          <div class="giftitem"><div class="title">🎟️ Annual Leave Lottery Ticket</div><div class="desc">Use when someone says “urgent.”</div></div>
-          <div class="giftitem"><div class="title">🏆 “Still Managing” Trophy</div><div class="desc">Because you make it look easy!</div></div>
-        </div>
-      </section>
-
-      <div class="signature">
-        <p><b>Once again, congratulations Akhil G! 🎉</b><br>Thank you for your dedication, leadership and continued support.</p>
-        <p>We are proud to have you as our <b>Team Lead!</b></p>
-        <p>Warm regards,<br><b>Management Team</b><br><span class="meta">(On behalf of the entire organization)</span></p>
-      </div>
-    </div>
-  </article>
-</main>
+<main class="chat" id="chat"><div class="date">TODAY</div></main>
+<div class="start" id="start"><button onclick="startChat()">Open Chat 💬</button></div>
+<div class="final" id="final"><div class="heart">💚</div><h2>Congratulations!</h2><p>You are officially one of my favourite people. 😌</p><p>Friendship status: <b>Unlocked 🔓</b></p></div>
 </div>
+<script>
+const messages=[
+["me","Hey Akhil 😄",700],["them","Hey! What happened? 😂",1100],
+["me","Nothing. I just came to disturb you. 😌",900],["them","I knew there had to be a reason. 😂",1200],
+["me","Can I ask you something?",900],["them","That sentence never ends well. 😭",1200],
+["me","When did we actually become this close? 👀",1000],["them","Honestly… I have no idea. It just happened. 😂",1400],
+["me","So you're admitting we're close friends now? 😏",900],["them","Apparently I don't have a choice anymore. 😂",1400],
+["me","Correct. No cancellation allowed. 😌",900],["them","Okay okay… close friend accepted. 😂🤝",1500],
+["me","Good. That's all I wanted to hear. 😎",900]
+];
+const chat=document.getElementById("chat"),status=document.getElementById("status");
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+async function startChat(){
+document.getElementById("start").style.display="none";
+for(const [who,text,delay] of messages){
+if(who==="them"){
+status.textContent="typing...";
+const t=document.createElement("div");t.className="typing";
+t.innerHTML='<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
+chat.appendChild(t);chat.scrollTop=chat.scrollHeight;await wait(Math.min(delay,1100));t.remove();status.textContent="online";
+}else await wait(delay);
+const el=document.createElement("div");el.className="msg "+(who==="me"?"me":"them");
+const time=new Date().toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"});
+el.innerHTML=text+' <span class="time">'+time+(who==="me"?' <span class="tick">✓✓</span>':'')+'</span>';
+chat.appendChild(el);chat.scrollTop=chat.scrollHeight;
+}
+await wait(700);document.getElementById("final").style.display="block";
+}
+</script>
 </body>
 </html>
